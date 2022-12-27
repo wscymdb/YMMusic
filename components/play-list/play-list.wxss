@@ -1,0 +1,19 @@
+/* components/play-list/play-list.wxss */
+.list {
+  padding: 40rpx 36rpx;
+}
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  color: #aaa
+}
+.cname {
+  font-size: 34rpx;
+}
+.name {
+  font-size: 28rpx;
+}
+.active {
+  color: green;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "recommend-item": "/components/recommend-item/recommend-item"
+  }
+}

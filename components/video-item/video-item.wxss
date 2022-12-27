@@ -1,0 +1,41 @@
+@import "./../../assets//iconfont//iconfont.wxss";
+.item {
+  padding: 10rpx;
+  height: 300rpx;
+}
+.album {
+  position: relative;
+  height: 220rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.album  .img {
+  width: 100%;
+  height: 100%;
+}
+.info {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10rpx;
+  color: #fff;
+}
+.info .left {
+  display: flex;
+  align-items: center;
+}
+.info .left .play-count {
+  margin-left: 10rpx;
+}
+.title {
+  font-size: 28rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

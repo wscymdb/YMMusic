@@ -1,0 +1,83 @@
+/* components/music-detail-title/music-detail-title.wxss */
+@import '/assets/iconfont/iconfont.wxss';
+.container {
+  position: relative;
+  padding: 80rpx 40rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background-position: top center;
+  background-size: cover;
+
+}
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.content {
+  position: relative;
+  z-index: 999;
+}
+.info {
+  display: flex;
+  justify-content: center;
+}
+.left {
+  flex-shrink: 0;
+  flex: 1;
+}
+.left .img {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 16rpx;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: 30rpx;
+}
+.avatar {
+  display: flex;
+  font-size: 24rpx;
+}
+.avatar .img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+.desc {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+}
+.text {
+  width: 100%;
+
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.btn-special {
+  font-weight: normal;
+  font-size: 24rpx;
+  color: #fff;
+  padding: 0;
+  background-color: transparent;
+
+}

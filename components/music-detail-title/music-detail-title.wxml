@@ -1,0 +1,40 @@
+<!--components/music-detail-title/music-detail-title.wxml-->
+<view 
+  class="container"
+  style="background-image: url({{itemData.coverImgUrl}});"
+  wx:if="{{itemData.coverImgUrl}}"
+  >
+<view class="mask"></view>
+<view class="content">
+  <view class="info">
+      <view class="left">
+        <image class="img" src="{{itemData.coverImgUrl}}"></image>
+      </view>
+      <view class="right">
+        <view class="title ">{{itemData.name}}</view>
+        <view class="avatar">
+          <image class="img" src="{{itemData.creator.avatarUrl}}"></image>
+          <view class="nickname">{{itemData.creator.nickname}}</view>
+        </view>
+        <view class="desc" bindtap="onDescTap">
+          <view class="text ellipsis">介绍：{{itemData.description}}</view>
+          <view  class="iconfont icon-arrow-right"></view>
+        </view>
+      </view>
+    </view>
+    <view class="action">
+      <view class="favor">
+        <text class="iconfont icon-favorate"></text>
+        {{fmt.formatUnit(itemData.subscribedCount)}}
+      </view>
+      <view class="share" bindtap="handleShare">
+        <button size="mini" class="btn-special" open-type="share">
+          <text class="iconfont icon-share"></text>
+          分享
+        </button>
+        
+      </view>
+    </view>
+</view>
+</view>
+<wxs src="/utils/util.wxs" module="fmt"></wxs>

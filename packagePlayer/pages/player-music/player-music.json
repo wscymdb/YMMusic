@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "play-list": "/components/play-list/play-list"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white"
+
+}

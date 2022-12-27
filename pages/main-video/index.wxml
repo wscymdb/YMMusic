@@ -1,0 +1,9 @@
+<!--pages/main-video/index.wxml-->
+<view class="main-video">
+  <view class="video-list">
+    <block wx:for="{{videoList}}" wx:key="id">
+      <video-item bindtap="onVideoTab"data-item="{{item}}" class="item" info="{{item}}"></video-item>
+    </block>
+  </view>
+  <view class="has-more" wx:if="{{!hasMore}}">身体被掏空了^_^</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "song-list": "/components/song-list/song-list",
+    "title-bar": "/components/title-bar/title-bar"
+  }
+}

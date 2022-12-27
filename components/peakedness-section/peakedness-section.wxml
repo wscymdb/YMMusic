@@ -1,0 +1,19 @@
+<!--components/peakedness-section/peakedness-section.wxml-->
+<view class="container" bindtap="handleTap">
+  <view class="list">
+    <view class="title">{{itemData.name}}</view>
+    <block wx:for="{{tracks}}" wx:key="id">
+      <view class="item">
+        <view class="index">{{index+1}}. </view>
+        <view class="mname">{{item.name}}</view>
+        <view class="name"> - {{item.ar[0].name}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="cover">
+    <image class="img" src="{{itemData.coverImgUrl}}"></image>
+    <view class="count">{{fmt.formatUnit(itemData.playCount)}}</view>
+  </view>
+</view>
+
+<wxs src="/utils/util.wxs" module="fmt"></wxs>

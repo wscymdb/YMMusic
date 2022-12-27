@@ -1,0 +1,28 @@
+/* pages/player-music/cpn/navigation-bar/navigation-bar.wxss */
+@import "/assets/iconfont/iconfont.wxss";
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  padding-left: 20rpx;
+}
+.left, .right {
+  width: 120rpx;
+}
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconfont {
+  font-weight: 700;
+  font-size: 47rpx;
+} 
+.center-default {
+  display: none;
+}
+.center-text:empty + .center-default {
+  display: inline-block;
+}

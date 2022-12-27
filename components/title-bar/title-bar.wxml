@@ -1,0 +1,9 @@
+<!--components/title-bar/title-bar.wxml-->
+<view class="title-bar">
+  <view class="left">
+    <slot name="left"></slot>
+  </view>
+  <view class="right" bindtap="onMoreTap">
+    <slot name="right"></slot>
+  </view>
+</view>

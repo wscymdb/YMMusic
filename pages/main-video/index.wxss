@@ -1,0 +1,18 @@
+/* pages/main-video/index.wxss */
+.video-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  padding: 0 10rpx;
+}
+.item {
+  width: 50%;
+}
+.has-more {
+  color: #999;
+  text-align: center;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+}

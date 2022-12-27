@@ -1,0 +1,11 @@
+<!--components/play-list/play-list.wxml-->
+  <van-popup   position="bottom"  bind:close="onClose" round  custom-style="height: 28%;" show="{{show}}">
+  <view class="list">
+    <view wx:for="{{playerList}}" class="item {{ id===item.id ? 'active' : '' }}" wx:key="index" bindtap="handleTap" data-id="{{item.id}}">
+    <view class="cname">{{item.name}}</view>
+    <view class="name">--{{item.ar[0].name}}</view>
+  </view>
+  </view>
+
+ </van-popup>
+

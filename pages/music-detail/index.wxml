@@ -1,0 +1,27 @@
+<!--pages/music-detail/index.wxml-->
+<view class="music-detail">
+  <view class="title"  wx:if="{{!isMenu}}">{{rankingInfos.name}}</view>
+  <view class="menu-title" wx:else>
+    <music-detail-title itemData="{{rankingInfos}}" bind:handleShare="handleShare" ></music-detail-title>
+  </view>
+  
+  <view class="list">
+    <block wx:for="{{rankingInfos.tracks}}" wx:key="id">
+      <view 
+        class="item {{currentIndex === index ? 'active' : ''}}"
+        bindtap="handleTap"
+        data-index="{{index}}"
+        data-id="{{item.id}}"
+        >
+        <view class="index">{{index + 1}}</view>
+        <view class="info">
+          <view class="mname">{{item.name}}</view>
+          <view class="name">
+            <text class="sqicon">SQ</text>
+          {{item.ar[0].name}} . {{item.al.name}}</view>
+        </view>
+      </view>
+    </block>
+    
+  </view>
+</view>

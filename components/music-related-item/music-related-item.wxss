@@ -1,0 +1,33 @@
+/* components/music-related-item/music-related-item.wxss */
+@import "/assets/iconfont/iconfont.wxss";
+.related {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.left {
+  width: 18%;
+  height: 125rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.left .img {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+.content .name {
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.right .iconfont {
+  font-weight: 700;
+  font-size: 40rpx;
+  color: #999;
+}

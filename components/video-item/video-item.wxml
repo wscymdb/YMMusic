@@ -1,0 +1,18 @@
+<!--components/video-item/video-item.wxml-->
+<view class="item">
+  <view class="album">
+    <image  class="img" src="{{info.cover}}"></image>
+    <view class="info">
+      <view class="left">
+        <text class="iconfont icon-Play"></text>
+        <view class="play-count">{{fmt.formatUnit(info.playCount)}}</view>
+      </view>
+      <view class="duration">{{fmt.formatTime(info.mv.videos[0].duration)}}</view>
+    </view>
+  </view>
+  <view class="title">
+    {{info.name}} - {{info.artistName}}
+  </view>
+</view>
+
+<wxs src="/utils/util.wxs" module="fmt"></wxs>

@@ -1,0 +1,4 @@
+/* pages/search/index.wxss */
+page {
+  --search-background-color: #fff;
+}

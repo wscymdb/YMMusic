@@ -1,0 +1,7 @@
+<!--pages/search/index.wxml-->
+<van-search
+  shape="round"
+  background="#fafafa"
+  placeholder="请输入搜索关键词"
+  bindtap="onSearchClick"
+/>

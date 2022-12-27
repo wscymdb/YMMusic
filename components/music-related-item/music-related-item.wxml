@@ -1,0 +1,15 @@
+<!--components/music-related-item/music-related-item.wxml-->
+<view class="related" bindtap="handleTap">
+  <view class="left">
+    <image class="img" src="{{itemData.al.picUrl}}"></image>
+  </view>
+  <view class="content">
+  <view class="title">{{itemData.name}}</view>
+  <view class="name">
+    {{itemData.ar[0].name}} · {{itemData.al.name}}
+  </view>
+  </view>
+  <view class="right">
+    <text class="iconfont icon-arrow-right"></text>
+  </view>
+</view>

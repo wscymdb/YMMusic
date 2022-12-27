@@ -1,0 +1,32 @@
+function formatUnit(num) {
+  num = Number(num)
+  if (num >= 100000000) {
+    num = (num / 100000000).toFixed(1)
+    return num + '亿'
+  } else if (num >= 10000) {
+    num = (num / 10000).toFixed(1)
+    return num + '万'
+  } else {
+    return num
+  }
+}
+
+
+function formatTime(timestamp) {
+  // console.log(timestamp);
+  timestamp = timestamp / 1000
+  var mm = Math.floor(timestamp / 60)
+  var ss = Math.floor(timestamp % 60)
+  return padStart(mm) + ':' + padStart(ss)
+}
+
+function padStart(n) {
+  n = n + ''
+  return ('00' + n).slice(n.length)
+}
+
+
+module.exports = {
+  formatUnit:formatUnit,
+  formatTime: formatTime
+}

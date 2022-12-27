@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-skeleton": "@vant/weapp/skeleton/index",
+    "title-bar": "/components/title-bar/title-bar",
+    "music-related-item": "/components/music-related-item/music-related-item",
+    "song-list-section": "/components/song-list-section/song-list-section",
+    "peakedness-section": "/components/peakedness-section/peakedness-section",
+    "play-list": "/components/play-list/play-list"
+  },
+  "navigationBarTitleText": "音乐"
+ 
+}

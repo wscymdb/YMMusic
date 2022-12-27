@@ -1,0 +1,21 @@
+/* components/song-list-section/song-list-section.wxss */
+@import "../../assets/iconfont/iconfont.wxss";
+.hot-list {
+  margin-bottom: 40rpx;
+}
+
+.hot-list .list {
+  margin-top: 25rpx;
+  width: 100vw;
+  margin-left: -20rpx;
+}
+
+
+.title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.iconfont {
+  font-size: 24rpx;
+}
+

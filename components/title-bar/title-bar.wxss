@@ -1,0 +1,10 @@
+/* components/title-bar/title-bar.wxss */
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right {
+  font-size: 24rpx;
+  color: #999;
+}

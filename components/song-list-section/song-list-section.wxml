@@ -1,0 +1,13 @@
+<!--components/song-list-section/song-list-section.wxml-->
+<view class="hot-list">
+  <title-bar bind:onMoreTap="onMoreTap">
+    <view class="title" slot="left">{{title}}</view>
+    <view class="icon" slot="right">
+      <text>更多</text>
+      <text class="iconfont icon-arrow-double-right"></text>
+    </view>
+  </title-bar>
+  <view class="list">
+    <song-list bind:onItemTap="onItemTap" itemData="{{songList}}"></song-list>
+  </view>
+</view>

@@ -1,0 +1,127 @@
+/* pages/player-music/player-music.wxss */
+.player-music {
+  color: #fff;
+}
+.player-music .nav-bar .tabs {
+  display: flex;
+  font-size: 28rpx;
+  color: #aaa;
+}
+.player-music .nav-bar .tabs .active {
+  color: #fff;
+  font-size: 30rpx;
+}
+.player-music .nav-bar .tabs .icon {
+  margin: 0 4rpx;
+}
+
+.player-music .content  {
+  box-sizing: border-box;
+  padding-top: 40rpx;
+} 
+.player-music .content .page-context {
+  height: 100%;
+}
+
+.player-music .content .item {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 55rpx;
+}
+
+.player-music .content .cover {
+  height: 50%;
+  /* text-align: center;
+  height: 600rpx; */
+}
+
+.player-music .content .img {
+  width: 100%;
+  height: 100%;
+}
+.player-music .content .info {
+  margin-top: 60rpx;
+  /* flex: 1; */
+}
+.player-music .content .info .title .mname {
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.player-music .content .info .title .name {
+  font-size: 28rpx;
+  margin: 10rpx 0;
+}
+.player-music .content .info .lyric {
+  padding: 0 70rpx;
+  margin: 40rpx 0;
+  text-align: center;
+  color: #fafafa;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.player-music .content .info .progress .slider {
+  margin: 20rpx 0 20rpx 14rpx;
+}
+.player-music .content .info .progress .time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.player-music .content .info .controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.player-music .content .info .controls .btn {
+  width: 80rpx;
+  height: 80rpx;
+}
+.player-music .content .info .controls .resume {
+  width: 120rpx;
+  height: 120rpx;
+}
+.player-music .content .info .controls .list {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.player-music .content .page-context .lyric-detail {
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+}
+.player-music .content .page-context .lyric-detail .lyrics {
+  height: 40px;
+  line-height: 40px;
+  color: #aaa;
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+
+.lyricActive {
+  color: #fff !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+
+/* mask */
+.player-music .bg-img, 
+.player-music .mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.player-music .mask {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+}
+

@@ -1,0 +1,16 @@
+<!-- 给手机状态栏位置添加一个位置，自定义nav-bar手机的状态栏不占据位置 -->
+<view class="status" style="height: {{statusHeight}}px;"></view>
+
+<view class="nav">
+  <view class="left" bindtap="goBack">
+    <text class="iconfont icon-arrow-left"></text>
+  </view>
+  <view class="center">
+    <view class="center-text">
+      <slot></slot>
+    </view>
+    <view class="center-default">导航标题</view>
+  </view>
+  <view class="right"></view>
+</view>
+

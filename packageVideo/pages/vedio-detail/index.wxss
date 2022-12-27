@@ -1,0 +1,38 @@
+/* pages/vedio-detail/index.wxss */
+.detail {
+  height: 100vh;
+}
+.detail .video {
+  width: 100%;
+}
+.detail .content {
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 30rpx;
+  height: calc(100% - 450rpx);
+}
+.detail .content .title {
+  color: #858483;
+  font-size: 24rpx;
+}
+.title .mv-name {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #000;
+}
+.title .name {
+  margin: 10rpx 0;
+}
+
+.recommend {
+  margin-top: 30rpx;
+}
+
+::-webkit-scrollbar {
+ 
+  width:0;
+   
+  height:0;
+   
+  color:transparent;
+   
+  }

@@ -1,0 +1,17 @@
+<!--components/song-list/song-list.wxml-->
+<scroll-view class="song-list" enable-flex 	scroll-x>
+  <block wx:for="{{itemData}}" wx:key="id">
+    <view class="item" bindtap="onItemTap" data-id="{{item.id}}">
+      <view class="top">
+        <image class="img"  src="{{item.coverImgUrl}}"></image>
+        <view class="count">{{fmt.formatUnit(item.playCount)}}</view>
+      </view>
+      <view class="title">
+      {{item.name}}
+      </view>
+    </view>
+  </block>
+</scroll-view > 
+
+
+<wxs src="/utils/util.wxs" module="fmt"></wxs>

@@ -1,0 +1,25 @@
+<!--pages/vedio-detail/index.wxml-->
+<view class="detail">
+  <video class="video" src="{{url}}" danmu-list="{{danmuList}}" controls  danmu-btn enable-danmu="{{false}}" show-casting-button></video>
+  <scroll-view scroll-y class="content">
+    <view class="title" wx:if="{{detail}}">
+      <view class="mv-name">{{detail.name}}</view>
+      <view class="name">{{detail.artistName}}</view>
+      <view class="time-count">
+        {{fmt.formatUnit(detail.playCount)}} · {{detail.publishTime}}
+      </view>
+    </view>
+    <view class="recommend">
+      <view class="caption">推荐视频</view>
+      <view class="recommend-list">
+        <block wx:for="{{recommendVideoList}}" wx:key="index">
+          <recommend-item itemData="{{item}}"></recommend-item>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>
+
+
+<wxs src="/utils/util.wxs" module="fmt"></wxs>

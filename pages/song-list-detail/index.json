@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "song-list-detail-item": "/components/song-list-detail-item/song-list-detail-item",
+    "van-overlay": "@vant/weapp/overlay/index"
+  }
+
+}

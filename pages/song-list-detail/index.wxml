@@ -1,0 +1,27 @@
+<!--pages/song-list-detail/index.wxml-->
+<view class="song-list-detail">
+<block wx:for="{{songList}}" wx:key="cat">
+<view class="title">{{item.cat}}</view>
+  <view class="list">
+    <block wx:for="{{item.playlists}}" wx:for-item="info" wx:key="id">
+      <view class="item">
+        <song-list-detail-item itemData="{{info}}"></song-list-detail-item>
+      </view>
+    </block>
+  </view>
+</block>
+
+<van-overlay show="{{ isLoading }}">
+  <view class="wrapper">
+    <view class="block">
+      <image class="img" src="/assets/images/loading.gif"></image>
+    </view>
+  </view>
+</van-overlay>
+
+
+  <view class="top" hidden="{{!showTop}}" bindtap="onTopClick">
+    <image class="img" src="/assets/images/top.png"></image>
+  </view>
+
+</view>

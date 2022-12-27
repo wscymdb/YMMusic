@@ -1,0 +1,76 @@
+<!--pages/main-music/index.wxml-->
+<view class="main-music">
+  <!-- search -->
+  <van-search disabled shape="round" background="#fafafa" placeholder="请输入搜索关键词" bindtap="onSearchClick" />
+
+  <!-- swipper -->
+  <view class="banner">
+    <swiper indicator-dots indicator-active-color="#fff" circular autoplay bindtap="onBannerClick" style="height:{{bannerHeight}}px;">
+      <block wx:for="{{swiperList}}" wx:key="index">
+        <swiper-item>
+          <image bindload="onSwipperImageLoad" class="banner-img" mode="widthFix" src="{{item.imageUrl}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 推荐歌曲 -->
+  <view class="recommend">
+    <title-bar bind:onMoreTap="onMoreTap" data-type="{{0}}">
+      <view class="title" slot="left">推荐歌曲</view>
+      <view class="icon" slot="right">
+        <text>更多</text>
+        <text class="iconfont icon-arrow-double-right"></text>
+      </view>
+    </title-bar>
+    <view class="recommend-list">
+      <block wx:for="{{recommendMusicList}}" wx:key="id">
+        <music-related-item itemData="{{item}}" data-i="{{index}}" bindtap="recommendMusiceTap"></music-related-item>
+      </block>
+      <block wx:for="{{5}}" wx:key="*this" wx:if="{{!recommendMusicList.length}}">
+        <van-skeleton avatar row="2" />
+      </block>
+
+    </view>
+  </view>
+
+  <!-- 热门歌单 -->
+  <song-list-section wx:if="{{hotSongList.length}}" title="热门歌单" songList="{{hotSongList}}" type="{{1}}">
+  </song-list-section>
+
+  <!-- 推荐歌单 -->
+  <song-list-section wx:if="{{recommendSongList.length}}" title="推荐歌单" songList="{{recommendSongList}}" type="{{2}}"></song-list-section>
+
+  <!-- 巅峰榜 -->
+  <view class="peakedness" wx:if="{{songInfos.newList.name}}">
+    <title-bar>
+      <view class="title" slot="left">巅峰榜</view>
+    </title-bar>
+    <view class="item">
+      <block wx:for="{{songInfos}}" wx:key="id">
+        <peakedness-section bind:moreTap="songListTap" wx:if="{{item.id}}" itemData="{{item}}"></peakedness-section>
+      </block>
+    </view>
+  </view>
+
+  <!--  -->
+  <view class="play-bar-placeholder"  wx:if="{{currentSong.al}}"></view>
+  <view class="player-bar" 
+  wx:if="{{currentSong.al || isPlaying}}"
+ 
+  >
+    <view class="cover"  bindtap="playBarTap">
+      <image class="img album-animation" 
+      src="{{currentSong.al.picUrl}}"
+      style="animation-play-state: {{isPlaying ? 'running' : 'paused'}};"
+      ></image>
+      <view class="name">{{currentSong.name}}</view>
+    </view>
+    <view class="controls">
+      <image class="cimg" src="/packagePlayer/assets/player/{{isPlaying ? 'pause' : 'play'}}_icon.png" bindtap="onTogglePlay"></image>
+
+      <image class="clist" src="/packagePlayer/assets/player/playlist_icon.png" bindtap="playListTap"></image>
+    </view>
+  </view>
+  <play-list show="{{playListShow}}" bind:close="onClose" ></play-list>
+</view>

@@ -1,0 +1,25 @@
+@import "/assets/style/common.wxss";
+.song-list {
+white-space: nowrap;
+
+}
+.item {
+  display: inline-block;
+  vertical-align: top;
+  width: 220rpx;
+  margin-left:20rpx;
+}
+.item:last-child {
+  margin-right: 20rpx;
+}
+.top {
+  position: relative;
+  height: 220rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.top .img {
+  width: 100%;
+  height: 100%;
+}
+

@@ -1,0 +1,11 @@
+<!--components/song-list-detail-item/song-list-detail-item.wxml-->
+<view class="item" bindtap="handleTap">
+  <view class="cover">
+    <image class="img" src="{{itemData.coverImgUrl}}"></image>
+    <view class="count">{{fmt.formatUnit(itemData.playCount)}}</view>
+  </view>
+  <view class="title">{{itemData.name}}</view>
+</view>
+
+<wxs src="/utils/util.wxs" module="fmt"></wxs>
+

@@ -1,0 +1,32 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/player-music/player-music",
+          "query": "id=1947584923",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "packagePlayer/pages/player-music/player-music",
+          "query": "id=1947584923",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
+}
